@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Faculty Search IITK</string>
+    <string-array name="dept">
+        <item>Department</item>
+        <item>Aerospace</item>
+        <item>BSBE</item>
+        <item>Chemical</item>
+        <item>Civil</item>
+        <item>CSE</item>
+        <item>Electrical</item>
+        <item>IME</item>
+        <item>MSE</item>
+        <item>Mechanical</item>
+        <item>Chemistry</item>
+        <item>Earth Sciences</item>
+        <item>Maths</item>
+        <item>Physics</item>
+        <item>Economics</item>
+        <item>English</item>
+        <item>Fine Arts</item>
+        <item>Philosophy</item>
+        <item>Psychology</item>
+        <item>Sociology</item>
+    </string-array>
+    <string-array name="designation">
+        <item>Designation</item>
+        <item>Professor</item>
+        <item>Assosciate Prof.</item>
+        <item>Assistant Prof.</item>
+    </string-array>
+    <string-array name="gender">
+        <item>Sex</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>
