@@ -15,6 +15,13 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.List;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -27,9 +34,7 @@ public class MainActivity extends AppCompatActivity {
     String Name=null,Username=null,Rinterest=null,Sex=null,Department=null,designation=null;
     int flag=0;
     String dept=null;
-
-
-
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +124,16 @@ public class MainActivity extends AppCompatActivity {
             flag=3;
         }
     }
+    this.listView = (ListView) findViewById(R.id.listView);
+    com.example.sandeep.facultysearchiitk.DatabaseAccess databaseAccess = com.example.sandeep.facultysearchiitk.DatabaseAccess.getInstance(this);
+    databaseAccess.open();
+    List<String> cse = databaseAccess.getcse();
+    databaseAccess.close();
+
+    ArrayAdapter<String> adaptr = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, cse);
+    this.listView.setAdapter(adaptr);
+
+
 
     public void Search(View view){
         Intent intent = new Intent(MainActivity.this , second_activity.class);
