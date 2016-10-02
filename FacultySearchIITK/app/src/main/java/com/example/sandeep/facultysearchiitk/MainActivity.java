@@ -122,26 +122,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void Search(View view){
         Intent intent = new Intent(MainActivity.this , second_activity.class);
-
+        startActivity(intent);
 // EditText txt= (EditText)findViewById(R.id.edit);
 ////       txt.setText(dept);
 //        intent.putExtra("One",dept);
-        if(dept!=null)
-        {
-//
-        SQLiteDatabase mydatabase = openOrCreateDatabase("database/"+dept+"/",MODE_PRIVATE,null);
-        Cursor resultSet = mydatabase.rawQuery("Select * from ? WHERE lower(name) = ?",new String[]{dept.toLowerCase(), Name.toLowerCase()});
-            resultSet.moveToFirst();
-//
-//            txt.setText(resultSet.getString(1));
-//
-            intent.putExtra("One",resultSet.getString(1));
-            startActivity(intent);
+//        if(dept!=null)
+//        {
+////
+//        SQLiteDatabase mydatabase = openOrCreateDatabase("database/"+dept+"/",MODE_PRIVATE,null);
+//        Cursor resultSet = mydatabase.rawQuery("Select * from ? WHERE lower(name) = ?",new String[]{dept.toLowerCase(), Name.toLowerCase()});
+//            resultSet.moveToFirst();
+////
+////            txt.setText(resultSet.getString(1));
+////
+//            intent.putExtra("One",resultSet.getString(1));
+
 //
 //
 //
     }
 
 
-}}
+}
 
