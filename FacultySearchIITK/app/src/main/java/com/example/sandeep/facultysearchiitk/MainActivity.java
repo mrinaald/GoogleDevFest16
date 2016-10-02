@@ -1,5 +1,7 @@
 package com.example.sandeep.facultysearchiitk;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
     int count=0;
     RadioButton nm,usn;
     EditText finalresult;
-    Button btn;
+    Button btn=null;
+    
 
 
 
@@ -104,8 +107,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void search(View view){
+    public void Search(View view){
+        Intent intent = new Intent(MainActivity.this , second_activity.class);
+        startActivity(intent);
         
     }
+
+
 }
 
